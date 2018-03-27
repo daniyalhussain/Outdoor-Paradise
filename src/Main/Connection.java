@@ -7,15 +7,31 @@ package main;
 
 /**
  *
- * @author tradebits
+ * @author Daniyal
  */
 public class Connection {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    private String host;
+    private String database;
+    private String user;
+    private String password;
+    
+    public Connection() {
+        init();
     }
     
+    private void init() {
+        try {
+            String driver = "com.mysql.jdbc.Driver";
+            Class.forName(driver);
+        } catch (ClassNotFoundException e) {
+            System.out.println(e);
+        }
+        
+        Parameters parameters = new Parameters();
+        host = parameters.getHOST();
+        database = parameters.getDATABASE();
+        user = parameters.getUSER();
+        password = parameters.getPASSWORD();
+    }
+  
 }

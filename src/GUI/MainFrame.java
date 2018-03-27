@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GUI;
+package gui;
 
 import javax.swing.JFrame;
 
 /**
  *
- * @author tradebits
+ * @author Daniyal
  */
 public class MainFrame extends JFrame {
     
-    private final int x_size = 500;
-    private final int y_size = 500;
+    private final int X = 500;
+    private final int Y = 500;
     
     public MainFrame() {
         initComponent();
@@ -22,10 +22,9 @@ public class MainFrame extends JFrame {
     
     private void initComponent() {
         
-        setSize(x_size, y_size);
+        setSize(X, Y);
         setTitle("Outdoor Paradise");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
         setVisible(true);
     }
     
